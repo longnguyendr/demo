@@ -25,4 +25,17 @@ class Search_model extends CI_model
     $this->db->where('carID',$carID) ;
     return $this->db->get()->result_array() ;
   }
+  function get_details($carID){
+    $this->db->select('cars.carID , cars.userID , cars.type_of_car , cars.title , cars.cover_photo , cars.year , cars.price , CONCAT(users.street, ", ", users.city, ", ",users.country) AS city, calendar.start_date,calendar.end_date');
+    $this->db->from('cars');
+    $this->db->join('users','cars.userID = users.id');
+    $this->db->join('calendar','cars.carID = calendar.carID','left');
+    $this->db->where('cars.carID',$carID);
+    return $this->db->get()->result_array();
+  }
+  public function insert_new_booking($insert_data){
+    $this->db->db_debug = false;
+    $test=$this->db->insert('bookings',$insert_data);
+    return $test;
+  }
 }

@@ -16,6 +16,9 @@ class Main extends CI_Controller {
 	}
 
   public function main_page(){
+    unset($_SESSION['chkin_session']);
+    unset($_SESSION['chkout_session']);
+    unset($_SESSION['price_session']);
     $data['dataImage'] = $this->Host_model->get_cover_photo() ;
     $data['page']='main/main_pages';
     $this->load->view('menu/content',$data);

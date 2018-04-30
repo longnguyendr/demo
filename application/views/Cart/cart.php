@@ -6,7 +6,6 @@
     <li>Confirm payment</li>
   </ul>
 </div>
-<?php echo $cars[0]['carID']; ?>
 <div class="container" style="box-shadow:0px 5px 10px;padding: 15px;">
   <!--Open row-->
   <div class="row">

@@ -10,9 +10,8 @@
 <div class="container" style="box-shadow:0px 5px 10px;padding: 15px;">
   <!--Open row-->
   <div class="row">
+    <!--Left Panel-->
       <div class="col-sm-6">
-
-        <!--Left Panel-->
         <div class="col-sm-12" style="padding:25px;">
           <!--Check in-->
             <div class="col-sm-6">
@@ -51,7 +50,6 @@
               </div>
             </div>
         </div>
-        <!--end Left panel-->
 
         <hr>
         <!--Cancellation-->
@@ -60,8 +58,9 @@
             <p><?php echo $cars[0]['cancellation_policy']?></p>
         </div>
         <!--End cancellation-->
-
       </div>
+    <!--end Left panel-->
+
       <!--Right Panel Price display-->
       <div class="col-sm-6">
             <!--upload-->
@@ -73,48 +72,54 @@
                 <i class="fa fa-cc-mastercard" style="font-size:50px"></i>
                 <i class="fa fa-cc-paypal" style="font-size:50px"></i>
             </div>
-            <div class="col-sm-12">
-              <div class="col-sm-6 text-center form-group">
-                <label for="fn">First name :</label>
-                <input class="form-control" id="fn" placeholder="Enter your first name"></input>
-              </div>
-              <div class="col-sm-6 text-center form-group">
-                <label for="">Last name :</label>
-                <input class="form-control" placeholder="Enter your last name"></input>
-              </div>
-            </div>
-            <!--End upload-->
-            <div class="col-sm-12">
-              <div class="col-sm-12 text-center form-group">
-                <label for="">Card information</label>
-                  <input class="form-control" id="cif" placeholder="Card number"></input>
-              </div>
-            </div>
-            <div class="col-sm-12">
-              <div class="col-sm-6 text-center form-group">
-                <input class="form-control" id="fn" placeholder="Expiration"></input>
-              </div>
-              <div class="col-sm-6 text-center form-group">
-                <input class="form-control" placeholder="CCV/CVV"></input>
-              </div>
-            </div>
-            <div class="col-sm-12">
-                <form>
+          <!--Checking card information-->
+          <form action="<?php echo site_url('cart/cart3s/'.$cars[0]['carID']);?>" method="post">
+                <div class="col-sm-12">
+                  <div class="col-sm-12 text-center form-group">
+                    <label for="">Full name :</label>
+                    <input class="form-control" name="fn" placeholder="Enter your full name" required></input>
+                  </div>
+                </div>
+                <!--End upload-->
+                <div class="col-sm-12">
+                  <div class="col-sm-12 text-center form-group">
+                    <label for="">Card information</label>
+                      <input class="form-control" id="cif" placeholder="Card number" required></input>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6 text-center form-group">
+                    <input class="form-control" name="Expiration" placeholder="Expiration" required></input>
+                  </div>
+                  <div class="col-sm-6 text-center form-group">
+                    <input class="form-control" name="CCV" placeholder="CCV/CVV" required></input>
+                  </div>
+                </div>
+                <div class="col-sm-12">
                     <div class="checkbox text-center">
-                      <label><input type="checkbox" value="">I agree to the <a href="">host's rules</a>, <a href=""> Cancellation</a>.
+                      <label><input type="checkbox" value="" required>I agree to the <a href="">host's rules</a>, <a href=""> Cancellation</a>.
                       <br>I also agree on <a href="">term of use</a> ,<a href="">privacy</a> of Engine4U</label>
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <input type="submit" class=" btn btn-primary " value="Confirm">
+                </div>
+                <input hidden  id="myID_add" type="text" name="myID_add" value="<?php echo $_SESSION['id'] ?>"><br>
+                <input hidden  id="city_add" type="text" name="city_add" value="<?php echo $add_city ?>"><br>
+                <input hidden  id="carID_add" type="text" name="carID_add" value="<?php echo $car_id ?>"><br>
+                <input hidden  id="check_in" type="text" name="check_in"value="<?php echo $check_out=$_SESSION['chkin_session']; ?>"><br>
+                <input hidden  id="check_out" type="text" name="check_out"value="<?php echo $check_out=$_SESSION['chkout_session']; ?>"><br>
+                <input hidden  id="prices" type="text" name="prices" value="<?php echo $price=$_SESSION['price_session']; ?>"><br>
+          </form>
+        <!--End Checking card information-->
         </div>
         <!--End Right Panel-->
         <div class="col-sm-12 text-left" style="padding-top:20px;">
           <a href="<?php echo site_url('cart/cart2s/'.$cars[0]['carID']);?>" type="button" class="btn btn-primary" >Back</a>
-            <a href="<?php echo site_url('cart/cart4s/'.$cars[0]['carID']);?>" type="button" class="btn btn-primary" >Continue</a>
         </div>
   </div>
   <!--End row-->
-
 </div>
 
+<hr>
 <hr>
