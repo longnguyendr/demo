@@ -45,44 +45,12 @@
 </div>
 <!--End Instruction-->
 
-<div class="container" style="border-radius: 2%;margin-top:80px;padding:20px;box-shadow:0px 10px 15px 0px;">
+<div class="container" style="border-radius: 2%;margin-top:40px;padding:20px;box-shadow:0px 10px 15px 0px;">
   <h1>Reservation</h1>
-  <input type="date"  id="start_d" value="<?php echo ($calendar[0]['start_date']); ?>"/>
-  <input type="date"  id="end_d" value="<?php echo ($calendar[0]['end_date']); ?>"/>
-  <p id="test" onclick="countingDate()">Test</p>
-  <script>
-      $(function xxxx() {
-      $('#datetimepicker_checkin').datetimepicker({
+  <input type="date" hidden id="start_d" value="<?php echo ($calendar[0]['start_date']); ?>"/>
+  <input type="date" hidden id="end_d" value="<?php echo ($calendar[0]['end_date']); ?>"/>
+  <!--<p id="test" onclick="countingDate()">Test</p>-->
 
-                  format: 'YYYY-MM-DD',
-                  // $('#datetimepicker_checkin').mindate($('#start_d.value'));
-              });
-      $('#datetimepicker_checkout').datetimepicker({
-          useCurrent: false ,
-          format: 'YYYY-MM-DD'  //Important! See issue #1075
-      });
-      $("#datetimepicker_checkin").on("dp.change", function (e) {
-          $('#datetimepicker_checkin').data("DateTimePicker").minDate(start_d.value);
-          $('#datetimepicker_checkin').data("DateTimePicker").maxDate(end_d.value);
-          $('#datetimepicker_checkout').data("DateTimePicker").minDate(start_d.value);
-          $('#datetimepicker_checkout').data("DateTimePicker").maxDate(end_d.value);
-          // console.log(typeof start_d.value);
-      });
-      });
-     function countingDate(){
-        var s_d = Date.parse(chkin.value) ;
-        var e_d = Date.parse(chkout.value) ;
-        var minute = 1000 *60 ;
-        var hour = minute * 60 ;
-        var day = hour * 24 ;
-        console.log(e_d-s_d) ;
-        var d = Math.round( (e_d - s_d)/ day) ;
-        var base_price =(document.getElementById('price').value) ;
-        console.log(base_price) ;
-        var total = d*base_price ;
-        document.getElementById('totalprices').innerHTML = total ;
-      };
-  </script>
     <!--MAIN contain for reserve-->
       <div class="row">
         <!--Left Panel-->
@@ -121,7 +89,8 @@
               <label for="">Total price:</label>
 
               <div style="font-size: 22px;background-color:silver;box-shadow:4px 6px 10px gray; border-radius:5px;width: 300px;margin:auto;">
-                <p id="totalprices" onlick="countingDate()"class="text-center">10$ * 10 hours = 3600000$</p>
+                <p id="total" class="text-center">Total: </p>
+                <p id="totalprices" class="text-center"></p>
               </div>
             </div>
             <div class="col-sm-12 text-center" >
@@ -129,7 +98,12 @@
                 <a href="<?php echo site_url('user/login');?>"type="button" class=" btn btn-primary ">Reserve</a>
               <?php } ?>
               <?php if($this->session->id){ ?>
-              <a href="<?php echo site_url('reserve/car/'.$cars[0]['carID']);?>"type="button" class=" btn btn-primary ">Reserve</a>
+                <form action="<?php echo site_url('reserve/car/'.$cars[0]['carID']);?>" method="post">
+                  <input type="submit" class=" btn btn-primary " value="Reserve">
+                  <input hidden id="test" type="text" name="check_in"><br>
+                  <input hidden id="test2" type="text" name="check_out"><br>
+                  <input hidden id="test3" type="text" name="prices"><br>
+                </form>
               <?php } ?>
             </div>
             <div class="col-sm-12" style="margin-top: 50px;height:300px;overflow-y: scroll;">
@@ -200,3 +174,6 @@
       <!--END Similar host display images-->
 </div>
 <hr>
+<!--calculate date and money function-->
+  <script src="<?php echo base_url('js/reserve.js'); ?>"></script>
+<!--End calculate day-->

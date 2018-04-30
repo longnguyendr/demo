@@ -1,6 +1,4 @@
 
-
-
 <div class="container" style="margin-top:80px;">
   <ul class="breadcrumb">
     <li><a href="<?php echo site_url('reserve/car/'.$cars[0]['carID']);?>">Booking details</li></a>
@@ -8,13 +6,61 @@
     <li class="active">Confirm payment</li>
   </ul>
 </div>
-
+<!--echo$cars[0]['carID'];-->
 <div class="container" style="box-shadow:0px 5px 10px;padding: 15px;">
   <!--Open row-->
   <div class="row">
       <div class="col-sm-6">
-        <?php $data['page']='cart/cart5';
-            $this->load->view($data['page']);?>
+
+        <!--Left Panel-->
+        <div class="col-sm-12" style="padding:25px;">
+          <!--Check in-->
+            <div class="col-sm-6">
+              <tr>
+              <td><label for="">CHECK-IN</label></td>
+                  <td>
+                      <div class='input-group date' id='datetimepicker_checkin'>
+                          <input disabled value="<?php echo $_SESSION['chkin_session'] ?>" type='text' id="chkin" class="form-control" name="check_in" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </td>
+              </tr>
+            </div>
+
+          <!--Check out-->
+            <div class="col-sm-6">
+              <tr>
+                <td><label for="">CHECK-OUT</label></td>
+                <td>
+                  <div class='input-group date' id='datetimepicker_checkout'>
+                      <input disabled value="<?php echo $_SESSION['chkout_session'] ?>" type='text' id="chkout" class="form-control" name="check_out"/>
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                  </div>
+                </td>
+              </tr>
+            </div>
+          <!--Total Price-->
+            <div class="col-sm-12">
+              <label for="">Total price:</label>
+              <div style="font-size: 22px;background-color:silver;box-shadow:4px 6px 10px gray; border-radius:5px;width: 300px;margin:auto;">
+                <p id="totalprices" class="text-center"><?php echo "Total: ".$_SESSION['price_session']."&euro;" ?></p>
+              </div>
+            </div>
+        </div>
+        <!--end Left panel-->
+
+        <hr>
+        <!--Cancellation-->
+        <div class="col-sm-12">
+            <h3>Cancellation Policy</h3>
+            <p><?php echo $cars[0]['cancellation_policy']?></p>
+        </div>
+        <!--End cancellation-->
+
       </div>
       <!--Right Panel Price display-->
       <div class="col-sm-6">
@@ -63,7 +109,7 @@
         </div>
         <!--End Right Panel-->
         <div class="col-sm-12 text-left" style="padding-top:20px;">
-            <a href="<?php echo site_url('cart/cart2s/'.$cars[0]['carID']);?>" type="button" class="btn btn-primary" >Back</a>
+          <a href="<?php echo site_url('cart/cart2s/'.$cars[0]['carID']);?>" type="button" class="btn btn-primary" >Back</a>
             <a href="<?php echo site_url('cart/cart4s/'.$cars[0]['carID']);?>" type="button" class="btn btn-primary" >Continue</a>
         </div>
   </div>

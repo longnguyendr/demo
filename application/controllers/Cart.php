@@ -10,12 +10,18 @@ class Cart extends CI_Controller {
 
 
   public function Cart2s($slug = null){
+    $_SESSION['price_session']=$_SESSION['price_session'];
+    $_SESSION['chkin_session']=$_SESSION['chkin_session'];
+    $_SESSION['chkout_session']=$_SESSION['chkout_session'];
     $data['cars'] = $this->search_model->get_carss($slug);
     $car_id = $data['cars'][0]['carID'];
     $data['page']='cart/cart2';
     $this->load->view('menu/content',$data);
   }
   public function Cart3s($slug = null){
+    $_SESSION['price_session']=$_SESSION['price_session'];
+    $_SESSION['chkin_session']=$_SESSION['chkin_session'];
+    $_SESSION['chkout_session']=$_SESSION['chkout_session'];
     $data['cars'] = $this->search_model->get_carss($slug);
     $car_id = $data['cars'][0]['carID'];
     $data['page']='cart/cart3';
