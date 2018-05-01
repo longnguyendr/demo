@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animate-fadein">
   <div class="col-lg-4 col-lg-offset-4">
       <h2>Forgot Password</h2>
       <p>Please enter your email address and we'll send you instructions on how to reset your password</p>

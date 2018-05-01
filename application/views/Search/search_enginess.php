@@ -46,7 +46,7 @@
   <!--End Instruction-->
 
   <!--Begin Search -->
-      <div class="container text-center">
+      <div class="container text-center animate-fadein">
         <h3>Book at Engine4U for the Best Rates Guaranteed</h3>
         <br>
         <div class="frame-search">
@@ -129,7 +129,7 @@
     <div class="container">
       <div class="row" >
         <!-- Google map API-->
-        <div class="col-sm-6">
+        <div class="col-sm-6 animate-left">
           <h3>My Google Maps Demo</h3>
           <div id="floating-panel">
             <input id="address" type="textbox" value="Sydney, NSW">

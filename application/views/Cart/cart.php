@@ -6,10 +6,10 @@
     <li>Confirm payment</li>
   </ul>
 </div>
-<div class="container" style="box-shadow:0px 5px 10px;padding: 15px;">
+<div class="container animate-left" style="box-shadow:0px 5px 10px;padding: 15px;">
   <!--Open row-->
-  <div class="row">
-      <div class="col-sm-6">
+  <div class="row ">
+      <div class="col-sm-6 animate-left">
 
         <!--Left Panel-->
         <div class="col-sm-12" style="padding:25px;">
@@ -61,7 +61,7 @@
 
       </div>
       <!--Right Panel Price display-->
-      <div class="col-sm-6">
+      <div class="col-sm-6 animate-left">
             <div class="col-sm-12 text-center">
                 <h2>Description</h2>
             </div>
@@ -69,7 +69,7 @@
                 <h3>Car Price: <input id="price" hidden value="<?php echo $cars[0]['price']?>"><?php echo $cars[0]['price']?>&euro;/Day</h3>
             </div>
             <!--Images-->
-            <div class="col-sm-12">
+            <div class="col-sm-12 ">
               <?php
               for ($i=0; $i <count($cars) ; $i++)
               {

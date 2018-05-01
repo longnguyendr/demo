@@ -25,7 +25,7 @@
 </head>
 
   <body>
-<div class="icons">
+<div class="icons animate-fadeins">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
           <div class="navbar-header">

@@ -42,8 +42,8 @@ function GetCarsBySearch() {
               //console.log("run 2 " +t + l + m + s + e + p);
               if(t && l && m && s && e && p) {
               //console.log(t + l + m + s + e + p);
-                  data = '<div class="col-sm-6 text-center">' ;
-                  data+= '<p><b>'+ jsonData[x].title + '</b></p><br>'+
+                  data = '<div class="col-sm-6 text-center animate-fadein">' ;
+                  data+= '<p ><b>'+ jsonData[x].title + '</b></p><br>'+
                          '<img src="' + cover_url + jsonData[x].cover_photo +'" style="width:150px; height:150px">' +
                          '<br><br></div>' ;
                   data = data.link("../Reserve/reserves/"+ jsonData[x].carID) ;
@@ -67,7 +67,7 @@ function GetCarsBySearch() {
                 data = '<div class="col-sm-6 text-center">' ;
                 data+=
                        '<b>'+ jsonData[x].title + '</b></button><br>'+
-                       '<img src="' + cover_url + jsonData[x].cover_photo +'" style="width:150px; height:150px">' +
+                       '<img class="animate-fadein" src="' + cover_url + jsonData[x].cover_photo +'" style="width:150px; height:150px">' +
                        '<br><br>'
                        ;
                 data = data.link("../Reserve/reserves/"+ jsonData[x].carID) ;

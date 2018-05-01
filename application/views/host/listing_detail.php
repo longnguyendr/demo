@@ -11,7 +11,9 @@
   </nav>
   <input type="number" id="userID" hidden value="<?php echo $this->session->id?>">
 </div>
-<div id="results" class="listing_detail" style="font-size:1.25em">
+
+<!--Contents-->
+<div id="results" class="listing_detail animate-left" style="font-size:1.25em">
 
   <?php echo form_open_multipart(('host_controller/edit_listing/').$carID); ?>
   <div class="container">

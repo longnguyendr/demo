@@ -1,7 +1,7 @@
 
 
 
-<div class="container" style="width: 70%;box-shadow:0px 5px 10px;padding: 15px;">
+<div class="container animate-fadein" style="width: 70%;box-shadow:0px 5px 10px;padding: 15px;">
     <div class="row">
       <div class="col-sm-12 text-center">
             <h2>Thank you! You have made a booking successfully</h2>

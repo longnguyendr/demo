@@ -79,9 +79,9 @@ function GetCars() {
               //console.log("run 2 " +t + l + m + s + e + p);
               if(t && l && m && s && e && p) {
               //console.log(t + l + m + s + e + p);
-              data = '<div class="col-sm-6 text-center">' ;
+              data = '<div class="col-sm-6 text-center tech">' ;
               data+= '<p><b>'+ jsonData[x].title + '</b></p><br>'+
-                     '<img src="' + cover_url + jsonData[x].cover_photo +'" style="width:150px; height:150px">' +
+                     '<img src="' + cover_url + jsonData[x].cover_photo +'" style="width:150px; height:150px;box-shadow:0px 2px 5px 0;">' +
                      '<br><br></div>' ;
               data = data.link("../Reserve/reserves/"+ jsonData[x].carID) ;
               data += '</div>' ;

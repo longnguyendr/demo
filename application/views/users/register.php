@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animate-fadein">
     <div class="col-lg-4 col-lg-offset-4">
         <h2>Hello There</h2>
         <h5>Please enter the required information below.</h5>

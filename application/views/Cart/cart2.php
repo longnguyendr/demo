@@ -1,16 +1,17 @@
 
-<div class="container" style="margin-top:80px;">
-  <ul class="breadcrumb">
-    <li><a href="<?php echo site_url('reserve/car/'.$cars[0]['carID']);?>">Booking details</li></a>
-    <li class="active">Identity prove</li>
-    <li>Confirm payment</li>
-  </ul>
-</div>
+
 <!--echo$cars[0]['carID'];-->
-<div class="container" style="box-shadow:0px 5px 10px;padding: 15px;">
+<div class="container animate-left" style="box-shadow:0px 5px 10px;padding: 15px;">
   <!--Open row-->
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="<?php echo site_url('reserve/car/'.$cars[0]['carID']);?>">Booking details</li></a>
+      <li class="active">Identity prove</li>
+      <li>Confirm payment</li>
+    </ul>
+  </div>
   <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 animate-left">
 
         <!--Left Panel-->
         <div class="col-sm-12" style="padding:25px;">
@@ -63,7 +64,7 @@
 
       </div>
       <!--Right Panel Price display-->
-      <div class="col-sm-6">
+      <div class="col-sm-6 animate-left">
             <!--upload-->
             <div class="col-sm-12 text-center">
                 <h2>Driver license attachment</h2>

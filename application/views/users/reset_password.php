@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animate-fadein">
   <div class="col-lg-4 col-lg-offset-4">
       <h2>Reset your password</h2>
       <h5>Hello <span><?php echo $firstName; ?></span>, Please enter your password 2x below to reset</h5>

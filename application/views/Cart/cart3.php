@@ -1,17 +1,18 @@
 
-<div class="container" style="margin-top:80px;">
-  <ul class="breadcrumb">
-    <li><a href="<?php echo site_url('reserve/car/'.$cars[0]['carID']);?>">Booking details</li></a>
-    <li><a href="<?php echo site_url('cart/cart2s/'.$cars[0]['carID']);?>">Identity prove</li></a>
-    <li class="active">Confirm payment</li>
-  </ul>
-</div>
+
 <!--echo$cars[0]['carID'];-->
-<div class="container" style="box-shadow:0px 5px 10px;padding: 15px;">
+<div class="container animate-left" style="box-shadow:0px 5px 10px;padding: 15px;">
+  <div class="container" >
+    <ul class="breadcrumb">
+      <li><a href="<?php echo site_url('reserve/car/'.$cars[0]['carID']);?>">Booking details</li></a>
+      <li><a href="<?php echo site_url('cart/cart2s/'.$cars[0]['carID']);?>">Identity prove</li></a>
+      <li class="active">Confirm payment</li>
+    </ul>
+  </div>
   <!--Open row-->
   <div class="row">
     <!--Left Panel-->
-      <div class="col-sm-6">
+      <div class="col-sm-6 animate-left">
         <div class="col-sm-12" style="padding:25px;">
           <!--Check in-->
             <div class="col-sm-6">
@@ -62,7 +63,7 @@
     <!--end Left panel-->
 
       <!--Right Panel Price display-->
-      <div class="col-sm-6">
+      <div class="col-sm-6 animate-left">
             <!--upload-->
             <div class="col-sm-12 text-center">
                 <h2>Confirm your payment</h2>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animate-fadein">
   <div class="col-lg-4 col-lg-offset-4">
       <h2>Engine4u</h2>
       <?php $fattr = array('class' => 'form-signin');

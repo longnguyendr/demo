@@ -1,7 +1,7 @@
 <?php $id_get = (int)$this->session->id ;
       $user_index = array_search($id_get,array_column($user_array,'id')) ;?>
 <?php echo form_open_multipart(('user/edit_user/').$id_get); ?>
-<div class="container" style="font-size: 1.25em">
+<div class="container animate-fadein" style="font-size: 1.25em">
   <form enctype="multipart/form-data" method="post">
       <input type="number" hidden name="id" value="<?php echo $id_get = (int)$this->session->id?>">
       <div class="row">

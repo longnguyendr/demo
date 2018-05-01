@@ -47,7 +47,7 @@
 
 
 <!--SLideshow-->
-<div class="container" style="margin-top:50px;">
+<div class="container animate-fadein" style="margin-top:50px;">
 <div class="row">
 
   <div class="col-sm-12">
@@ -241,47 +241,7 @@
        <p><a href="<?php echo site_url('main/listing_show')?>">See More</a></p>
      </div>
    </div>
-   <div class="row">
-  	<div class="col-sm-5 text-left">
-    	<div class="wells">
-        	<h4>Experiences from customers</h4>
-        </div>
-    </div>
-  </div>
-
-   <div class="row">
-
-     <div class="col-sm-2">
-       <p>Partner 1</p>
-       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-     </div>
-     <div class="col-sm-2">
-       <p>Partner 2</p>
-       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-     </div>
-     <div class="col-sm-2">
-       <p>Partner 3</p>
-       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-     </div>
-     <div class="col-sm-2">
-       <p>Partner 4</p>
-       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-     </div>
-     <div class="col-sm-2">
-       <p>Partner 5</p>
-       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-     </div>
-     <div class="col-sm-2">
-       <p>Partner 6</p>
-       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-2">
-      <p><a href="listing_show.php">See More</a></p>
-    </div>
-  </div>
+   
   <hr>
 </div>
 

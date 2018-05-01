@@ -12,7 +12,7 @@
   </nav>
   <input type="number" id="userID" hidden value="<?php echo $this->session->id?>">
 </div>
-<div id="results" class="addform">
+<div id="results" class="addform container animate-fadein">
 
   <form enctype="multipart/form-data" method="POST" id="AddForm">
     <input type="number" hidden name="userID" value="<?php echo $this->session->id ?>">
@@ -86,5 +86,5 @@
   <div style="text-align:center">
       <button onclick="AddListing()" class="btn btn-info" style="font-size:1.0em">SAVE</button>
   </div>
-
+</div>
   <?php $this->load->view('menu/footer') ; ?>

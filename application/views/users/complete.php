@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container animate-fadein">
   <div class="col-lg-4 col-lg-offset-4">
       <h2>Almost There!</h2>
       <h5>Hello <span><?php echo $firstName ?></span>. Your username is <span><?php echo $email;?></span></h5>

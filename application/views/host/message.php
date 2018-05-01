@@ -1,4 +1,4 @@
-<div class="hostNav" style="text-align:center">
+<div class="hostNav animate-fadein" style="text-align:center">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <ul class="nav navbar-nav">

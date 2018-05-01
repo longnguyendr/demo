@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="<?php echo base_url('css/first_style.css');?>">
 </head>
 <body>
-  <div class="text-center">
+  <div class="text-center animate-left">
     <h1>Welcome to <b class="fonts">Engine4U</b></h1>
   </div>
       <div class="container firsts">
         <div class="row">
-          <div class="col-sm-4 tells">
+          <div class="col-sm-4 tells animate-left">
             <h2>Instruction</h2>
             <div class="customer_instruction">
               <h4>FOR CUSTOMER</h4><br>
@@ -40,7 +40,7 @@
             <hr>
           </div>
 
-          <div class="col-sm-8 slid">
+          <div class="col-sm-8 slid animate-fadein">
             <div id="myCarousel" class="carousel slide " data-ride="carousel">
 
               <!-- Wrapper for slides -->

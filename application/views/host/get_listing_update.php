@@ -11,7 +11,8 @@
   </nav>
   <input type="number" id="userID" hidden value="<?php echo $this->session->id?>">
 </div>
-<div id="results">
+
+<div id="results" class="animate-fadein">
 
   <table border="1" align="center" class="getListing">
   <?php

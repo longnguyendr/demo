@@ -45,16 +45,16 @@
 </div>
 <!--End Instruction-->
 
-<div class="container" style="border-radius: 2%;margin-top:40px;padding:20px;box-shadow:0px 10px 15px 0px;">
+<div class="container animate-left" style="border-radius: 2%;margin-top:40px;padding:20px;box-shadow:0px 10px 15px 0px;">
   <h1>Reservation</h1>
   <input type="date" hidden id="start_d" value="<?php echo ($calendar[0]['start_date']); ?>"/>
   <input type="date" hidden id="end_d" value="<?php echo ($calendar[0]['end_date']); ?>"/>
   <!--<p id="test" onclick="countingDate()">Test</p>-->
 
     <!--MAIN contain for reserve-->
-      <div class="row">
+      <div class="row ">
         <!--Left Panel-->
-        <div class="col-sm-6">
+        <div class="col-sm-6 animate-left">
           <!--Check in-->
             <div class="col-sm-6">
               <tr>
@@ -116,7 +116,7 @@
 
         <!--Right Panel Price display-->
         <!-- print_r($cars) -->
-        <div class="col-sm-6">
+        <div class="col-sm-6 animate-left">
               <div class="col-sm-12 text-center">
                   <h2>Description</h2>
               </div>
@@ -124,11 +124,11 @@
                   <h3>Car Price: <input id="price" hidden value="<?php echo $cars[0]['price']?>"><?php echo $cars[0]['price']?>&euro;/Day</h3>
               </div>
               <!--Images-->
-              <div class="col-sm-12">
+              <div class="col-sm-12" id="animate">
                   <?php
                   for ($i=0; $i <count($cars) ; $i++)
                   {
-                    echo '<div class="col-sm-4">';
+                    echo '<div class="col-sm-4 ">';
                     echo '<img class="img-responsive" src="'.base_url().'other_gallery/'.$cars[$i]['photo']. '" alt="Image" style="height:100px">';
                     echo '<br><br>' ;
                     echo '</div>' ;
